@@ -11,7 +11,7 @@ class EarthSampler(BinarySwap):
 
     def __init__(self, columns: list = None, force_series: list = None,
                  force_lags: list = None, p_delete: float = 0.1,
-                 one_lag_per_series: bool = True, *args,**kwargs):
+                 one_lag_per_series: bool = True, *args, **kwargs):
         super(EarthSampler, self).__init__(*args, **kwargs)
         self.columns = columns
         self.names = list(set([c.split(".")[0] for c in columns]))

@@ -193,4 +193,4 @@ class Diagnostics:
     def score(self):
         mse, gvc, rsq, grsq = self.model.mse_, self.model.gcv_, self.model.rsq_, self.model.grsq_
         msg = "MSE: {:.4f}, GCV: {:.4f}, RSQ:{:.4f}, GRSQ: {:.4f}".format(mse, gvc, rsq, grsq)
-        print(msg)
+        return msg

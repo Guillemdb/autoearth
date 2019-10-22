@@ -252,7 +252,8 @@ class KLEBCRE(Earth):
 
             return data.loc[:, cols].copy()
 
-        lags = pd.concat([get_lags(df, c, (range(1, 7) if c != target else [0, 1, 2, 6, 11, 12]))
+        lags = pd.concat([get_lags(df, c, (range(1, 7) if c != target else [0, 1, 2, 3, 4, 5, 6,
+                                                                            10, 11, 12]))
                           for c in df.columns], axis=1)
         self.X = lags.drop(target, axis=1)
         self.y = lags[target].values
